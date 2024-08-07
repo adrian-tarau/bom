@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Licensed to the Apache Software Foundation (ASF) under one
+  ~ or more contributor license agreements.  See the NOTICE file
+  ~ distributed with this work for additional information
+  ~ regarding copyright ownership.  The ASF licenses this file
+  ~ to you under the Apache License, Version 2.0 (the
+  ~ "License"); you may not use this file except in compliance
+  ~ with the License.  You may obtain a copy of the License at
+  ~
+  ~   http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing,
+  ~ software distributed under the License is distributed on an
+  ~ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+  ~ KIND, either express or implied.  See the License for the
+  ~ specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.microfalx.bom</groupId>
+    <artifactId>bom-base</artifactId>
+    <version>1.0.0</version>
+
+    <parent>
+        <groupId>net.microfalx.bom</groupId>
+        <artifactId>bom</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <name>BOM :: Base</name>
+
+    <properties>
+
+        <!-- Runtime -->
+
+        <slf4j.version>2.0.14</slf4j.version>
+
+        <apache.commons.lang.version>3.15.0</apache.commons.lang.version>
+        <apache.common.compress.version>1.26.2</apache.common.compress.version>
+        <apache.common.codec.version>1.17.1</apache.common.codec.version>
+        <apache.httpclient.version>4.5.13</apache.httpclient.version>
+        <apache.commons.io.version>2.16.1</apache.commons.io.version>
+        <apache.commons.math.version>3.6.1</apache.commons.math.version>
+        <apache.lucene.version>9.11.1</apache.lucene.version>
+        <apache.tika.version>2.9.2</apache.tika.version>
+
+        <dom4j.version>2.1.4</dom4j.version>
+        <guava.version>33.2.1-jre</guava.version>
+        <classindex.version>3.13</classindex.version>
+        <sshd.version>2.13.2</sshd.version>
+        <aws.s3.version>1.12.767</aws.s3.version>
+        <jsch.version>0.1.55</jsch.version>
+        <rocksdb.version>9.4.0</rocksdb.version>
+        <micrometer.version>1.13.2</micrometer.version>
+        <kryo.version>5.6.0</kryo.version>
+        <lombok.version>1.18.34</lombok.version>
+        <jodd.version>5.1.6</jodd.version>
+        <confluent.version>7.7.0</confluent.version>
+        <flexmark.version>0.64.8</flexmark.version>
+        <mvel.version>2.5.2.Final</mvel.version>
+        <jsqlparser.version>5.0</jsqlparser.version>
+        <logstash-gelf.version>1.15.1</logstash-gelf.version>
+        <datafaker.version>2.3.1</datafaker.version>
+        <logback.version>1.5.6</logback.version>
+        <ipaddress.version>5.5.0</ipaddress.version>
+        <joor.version>0.9.15</joor.version>
+        <ulidj.version>1.0.4</ulidj.version>
+        <netty.version>4.1.112.Final</netty.version>
+
+        <flyaway.version>10.17.0</flyaway.version>
+        <mysql.version>9.0.0</mysql.version>
+        <postgres.version>42.7.3</postgres.version>
+        <vertica.version>24.3.0-0</vertica.version>
+        <mariadb.version>3.4.1</mariadb.version>
+        <sqlite.version>3.46.0.1</sqlite.version>
+        <h2.version>2.3.230</h2.version>
+        <ojdbc.version>23.5.0.24.07</ojdbc.version>
+
+        <!-- Tests -->
+
+        <junit.version>5.10.3</junit.version>
+        <assertj.version>3.26.3</assertj.version>
+        <assertj.guava.version>3.26.3</assertj.guava.version>
+        <mockito.version>5.12.0</mockito.version>
+        <jmh.version>1.37</jmh.version>
+        <awaitility.version>4.2.2</awaitility.version>
+        <testcontainers.version>1.20.1</testcontainers.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Tests / Misc -->
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>${assertj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-guava</artifactId>
+                <version>${assertj.guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-core</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openjdk.jmh</groupId>
+                <artifactId>jmh-generator-annprocess</artifactId>
+                <version>${jmh.version}</version>
+            </dependency>
+
+            <!-- Tests / BOMs -->
+
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>${junit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-bom</artifactId>
+                <version>${mockito.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Runtime / Logging -->
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-bom</artifactId>
+                <version>${slf4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Runtime / Apache -->
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache.commons.lang.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-compress</artifactId>
+                <version>${apache.common.compress.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>${apache.common.codec.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.sshd</groupId>
+                <artifactId>sshd-core</artifactId>
+                <version>${sshd.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.sshd</groupId>
+                <artifactId>sshd-sftp</artifactId>
+                <version>${sshd.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${apache.commons.io.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-math3</artifactId>
+                <version>${apache.commons.math.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-queries</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-codecs</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-queryparser</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-suggest</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-facet</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-highlighter</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-misc</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-backward-codecs</artifactId>
+                <version>${apache.lucene.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-core</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-code-module</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-digest-commons</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-pdf-module</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-xml-module</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-xmp-commons</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-html-module</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-parser-text-module</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+                <artifactId>tika-langdetect-optimaize</artifactId>
+                <version>${apache.tika.version}</version>
+            </dependency>
+
+            <!-- Runtime / Database -->
+
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-core</artifactId>
+                <version>${flyaway.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-mysql</artifactId>
+                <version>${flyaway.version}</version>
+                <optional>true</optional>
+            </dependency>
+
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgres.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vertica.jdbc</groupId>
+                <artifactId>vertica-jdbc</artifactId>
+                <version>${vertica.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mariadb.jdbc</groupId>
+                <artifactId>mariadb-java-client</artifactId>
+                <version>${mariadb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.h2database</groupId>
+                <artifactId>h2</artifactId>
+                <version>${h2.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.xerial</groupId>
+                <artifactId>sqlite-jdbc</artifactId>
+                <version>${sqlite.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.oracle.database.jdbc</groupId>
+                <artifactId>ojdbc-bom</artifactId>
+                <version>${ojdbc.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Runtime / Misc -->
+
+            <dependency>
+                <groupId>org.dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.atteo.classindex</groupId>
+                <artifactId>classindex</artifactId>
+                <version>${classindex.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jcraft</groupId>
+                <artifactId>jsch</artifactId>
+                <version>${jsch.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-s3</artifactId>
+                <version>${aws.s3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.rocksdb</groupId>
+                <artifactId>rocksdbjni</artifactId>
+                <version>${rocksdb.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.esotericsoftware</groupId>
+                <artifactId>kryo</artifactId>
+                <version>${kryo.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.seancfoley</groupId>
+                <artifactId>ipaddress</artifactId>
+                <version>${ipaddress.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mvel</groupId>
+                <artifactId>mvel2</artifactId>
+                <version>${mvel.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jodd</groupId>
+                <artifactId>jodd-bean</artifactId>
+                <version>${jodd.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.confluent</groupId>
+                <artifactId>kafka-avro-serializer</artifactId>
+                <version>${confluent.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.datafaker</groupId>
+                <artifactId>datafaker</artifactId>
+                <version>${datafaker.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jooq</groupId>
+                <artifactId>joor</artifactId>
+                <version>${joor.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.azam.ulidj</groupId>
+                <artifactId>ulidj</artifactId>
+                <version>${ulidj.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.vladsch.flexmark</groupId>
+                <artifactId>flexmark-all</artifactId>
+                <version>${flexmark.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.jsqlparser</groupId>
+                <artifactId>jsqlparser</artifactId>
+                <version>${jsqlparser.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>biz.paluch.logging</groupId>
+                <artifactId>logstash-gelf</artifactId>
+                <version>${logstash-gelf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-core</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>${logback.version}</version>
+            </dependency>
+
+            <!-- Runtime / BOMs -->
+
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-bom</artifactId>
+                <version>${netty.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.micrometer</groupId>
+                <artifactId>micrometer-bom</artifactId>
+                <version>${micrometer.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+</project>
