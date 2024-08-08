@@ -44,9 +44,10 @@
         <apache.commons.lang.version>3.15.0</apache.commons.lang.version>
         <apache.common.compress.version>1.26.2</apache.common.compress.version>
         <apache.common.codec.version>1.17.1</apache.common.codec.version>
-        <apache.httpclient.version>4.5.13</apache.httpclient.version>
+        <apache.httpclient.version>4.5.14</apache.httpclient.version>
         <apache.commons.io.version>2.16.1</apache.commons.io.version>
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
+        <apache.commons.email.version>1.6.0</apache.commons.email.version>
         <apache.lucene.version>9.11.1</apache.lucene.version>
         <apache.tika.version>2.9.2</apache.tika.version>
 
@@ -72,6 +73,11 @@
         <joor.version>0.9.15</joor.version>
         <ulidj.version>1.0.4</ulidj.version>
         <netty.version>4.1.112.Final</netty.version>
+        <syslog4j.version>0.9.61</syslog4j.version>
+        <snmp4j.version>3.8.2</snmp4j.version>
+        <jsmiparser.version>0.14</jsmiparser.version>
+        <syslog.version>1.1.7</syslog.version>
+        <subethasmtp.version>7.1.1</subethasmtp.version>
 
         <flyaway.version>10.17.0</flyaway.version>
         <mysql.version>9.0.0</mysql.version>
@@ -183,6 +189,18 @@
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${apache.common.codec.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-email</artifactId>
+                <version>${apache.commons.email.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${apache.httpclient.version}</version>
             </dependency>
 
             <dependency>
@@ -496,6 +514,48 @@
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
                 <version>${logback.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.davidmoten</groupId>
+                <artifactId>subethasmtp</artifactId>
+                <version>${subethasmtp.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.graylog2</groupId>
+                <artifactId>syslog4j</artifactId>
+                <version>${syslog4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.cloudbees</groupId>
+                <artifactId>syslog-java-client</artifactId>
+                <version>${syslog.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.snmp4j</groupId>
+                <artifactId>snmp4j</artifactId>
+                <version>${snmp4j.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jsmiparser</groupId>
+                <artifactId>jsmiparser-api</artifactId>
+                <version>${jsmiparser.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <!-- Runtime / BOMs -->
