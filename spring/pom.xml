@@ -39,7 +39,6 @@
 
         <!-- Tests -->
 
-        <selenium.version>4.23.0</selenium.version>
 
         <!-- Runtime -->
 
@@ -115,14 +114,6 @@
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>artemis-bom</artifactId>
                 <version>${apache.activemq.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-bom</artifactId>
-                <version>${selenium.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
