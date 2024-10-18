@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -39,66 +39,67 @@
 
         <!-- Runtime -->
 
-        <slf4j.version>2.0.14</slf4j.version>
+        <slf4j.version>2.0.16</slf4j.version>
+        <log4j.version>2.24.1</log4j.version>
 
-        <apache.commons.lang.version>3.15.0</apache.commons.lang.version>
-        <apache.common.compress.version>1.26.2</apache.common.compress.version>
+        <apache.commons.lang.version>3.17.0</apache.commons.lang.version>
+        <apache.common.compress.version>1.27.1</apache.common.compress.version>
         <apache.common.codec.version>1.17.1</apache.common.codec.version>
         <apache.httpclient.version>4.5.14</apache.httpclient.version>
-        <apache.commons.io.version>2.16.1</apache.commons.io.version>
+        <apache.commons.io.version>2.17.0</apache.commons.io.version>
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
         <apache.commons.email.version>1.6.0</apache.commons.email.version>
-        <apache.lucene.version>9.11.1</apache.lucene.version>
+        <apache.lucene.version>9.12.0</apache.lucene.version>
         <apache.tika.version>2.9.2</apache.tika.version>
 
         <dom4j.version>2.1.4</dom4j.version>
-        <guava.version>33.2.1-jre</guava.version>
+        <guava.version>33.3.1-jre</guava.version>
         <classindex.version>3.13</classindex.version>
-        <sshd.version>2.13.2</sshd.version>
-        <aws.s3.version>1.12.767</aws.s3.version>
+        <sshd.version>2.14.0</sshd.version>
+        <aws.s3.version>1.12.775</aws.s3.version>
         <jsch.version>0.1.55</jsch.version>
-        <rocksdb.version>9.4.0</rocksdb.version>
-        <micrometer.version>1.13.2</micrometer.version>
-        <kryo.version>5.6.0</kryo.version>
+        <rocksdb.version>9.6.1</rocksdb.version>
+        <micrometer.version>1.13.6</micrometer.version>
+        <kryo.version>5.6.2</kryo.version>
         <lombok.version>1.18.34</lombok.version>
         <jodd.version>5.1.6</jodd.version>
-        <confluent.version>7.7.0</confluent.version>
+        <confluent.version>7.7.1</confluent.version>
         <flexmark.version>0.64.8</flexmark.version>
         <mvel.version>2.5.2.Final</mvel.version>
         <jsqlparser.version>5.0</jsqlparser.version>
         <logstash-gelf.version>1.15.1</logstash-gelf.version>
-        <datafaker.version>2.3.1</datafaker.version>
-        <logback.version>1.5.6</logback.version>
-        <ipaddress.version>5.5.0</ipaddress.version>
+        <datafaker.version>2.4.0</datafaker.version>
+        <logback.version>1.5.11</logback.version>
+        <ipaddress.version>5.5.1</ipaddress.version>
         <joor.version>0.9.15</joor.version>
         <ulidj.version>1.0.4</ulidj.version>
-        <netty.version>4.1.112.Final</netty.version>
+        <netty.version>4.1.114.Final</netty.version>
         <syslog4j.version>0.9.61</syslog4j.version>
         <snmp4j.version>3.8.2</snmp4j.version>
         <jsmiparser.version>0.14</jsmiparser.version>
         <syslog.version>1.1.7</syslog.version>
         <subethasmtp.version>7.1.1</subethasmtp.version>
 
-        <flyaway.version>10.17.0</flyaway.version>
-        <mysql.version>9.0.0</mysql.version>
-        <postgres.version>42.7.3</postgres.version>
-        <vertica.version>24.3.0-0</vertica.version>
+        <flyaway.version>10.20.0</flyaway.version>
+        <mysql.version>9.1.0</mysql.version>
+        <postgres.version>42.7.4</postgres.version>
+        <vertica.version>24.4.0-0</vertica.version>
         <mariadb.version>3.4.1</mariadb.version>
-        <sqlite.version>3.46.0.1</sqlite.version>
-        <h2.version>2.3.230</h2.version>
+        <sqlite.version>3.46.1.3</sqlite.version>
+        <h2.version>2.3.232</h2.version>
         <ojdbc.version>23.5.0.24.07</ojdbc.version>
 
         <!-- Tests -->
 
-        <junit.version>5.10.3</junit.version>
+        <junit.version>5.11.2</junit.version>
         <assertj.version>3.26.3</assertj.version>
         <assertj.guava.version>3.26.3</assertj.guava.version>
-        <mockito.version>5.12.0</mockito.version>
+        <mockito.version>5.14.2</mockito.version>
         <jmh.version>1.37</jmh.version>
         <awaitility.version>4.2.2</awaitility.version>
-        <selenium.version>4.23.0</selenium.version>
+        <selenium.version>4.25.0</selenium.version>
         <webdrivermanager.version>5.9.2</webdrivermanager.version>
-        <testcontainers.version>1.20.1</testcontainers.version>
+        <testcontainers.version>1.20.2</testcontainers.version>
 
     </properties>
 
@@ -561,6 +562,14 @@
             </dependency>
 
             <!-- Runtime / BOMs -->
+
+            <dependency>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-bom</artifactId>
+                <version>${log4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <groupId>io.netty</groupId>
