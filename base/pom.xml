@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -49,6 +49,7 @@
         <apache.commons.io.version>2.17.0</apache.commons.io.version>
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
         <apache.commons.email.version>1.6.0</apache.commons.email.version>
+        <apache.commons.csv.version>1.12.0</apache.commons.csv.version>
         <apache.lucene.version>9.12.0</apache.lucene.version>
         <apache.tika.version>2.9.2</apache.tika.version>
 
@@ -559,6 +560,12 @@
                         <artifactId>slf4j-api</artifactId>
                     </exclusion>
                 </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-csv</artifactId>
+                <version>${apache.commons.csv.version}</version>
             </dependency>
 
             <!-- Runtime / BOMs -->
