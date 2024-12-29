@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-spring</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </parent>
 
     <name>BOM :: Spring</name>
@@ -42,21 +42,22 @@
 
         <!-- Runtime -->
 
-        <apache.pulsar.version>3.3.2</apache.pulsar.version>
-        <apache.activemq.version>2.37.0</apache.activemq.version>
-        <opentelemetry.version>1.43.0</opentelemetry.version>
-        <prometheus.metrics.version>1.3.1</prometheus.metrics.version>
+        <apache.pulsar.version>4.0.1</apache.pulsar.version>
+        <apache.activemq.version>2.39.0</apache.activemq.version>
+        <opentelemetry.version>1.45.0</opentelemetry.version>
+        <prometheus.metrics.version>1.3.5</prometheus.metrics.version>
         <rest-assured.version>5.5.0</rest-assured.version>
         <rsocket.version>1.1.4</rsocket.version>
-        <jackson.version>2.18.0</jackson.version>
-        <jetty.version>12.0.14</jetty.version>
-        <jetty-ee10.version>12.0.14</jetty-ee10.version>
+        <jackson.version>2.18.2</jackson.version>
+        <jetty.version>12.0.16</jetty.version>
+        <jetty-ee10.version>12.0.16</jetty-ee10.version>
         <jersey.version>3.1.9</jersey.version>
-        <infinispan.version>15.0.10.Final</infinispan.version>
-        <kotlin.version>2.0.21</kotlin.version>
-        <kotlin.serialization.version>1.7.1</kotlin.serialization.version>
-        <graphql-java.version>20.2</graphql-java.version>
-        <spring.boot.version>3.3.4</spring.boot.version>
+        <infinispan.version>15.1.3.Final</infinispan.version>
+        <kotlin.version>2.1.0</kotlin.version>
+        <kotlin.coroutines.version>1.10.1</kotlin.coroutines.version>
+        <kotlin.serialization.version>1.7.3</kotlin.serialization.version>
+        <graphql-java.version>22.3</graphql-java.version>
+        <spring.boot.version>3.4.1</spring.boot.version>
 
     </properties>
 
@@ -161,6 +162,14 @@
 
             <dependency>
                 <groupId>org.jetbrains.kotlinx</groupId>
+                <artifactId>kotlinx-coroutines-bom</artifactId>
+                <version>${kotlin.coroutines.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jetbrains.kotlinx</groupId>
                 <artifactId>kotlinx-serialization-bom</artifactId>
                 <version>${kotlin.serialization.version}</version>
                 <type>pom</type>
@@ -201,7 +210,7 @@
             <dependency>
                 <groupId>nz.net.ultraq.thymeleaf</groupId>
                 <artifactId>thymeleaf-layout-dialect</artifactId>
-                <version>3.2.1</version>
+                <version> 3.3.0</version>
             </dependency>
 
         </dependencies>
