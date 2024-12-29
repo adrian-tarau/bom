@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.3</version>
+        <version>1.0.4</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -51,11 +51,13 @@
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
         <apache.commons.email.version>1.6.0</apache.commons.email.version>
         <apache.commons.csv.version>1.12.0</apache.commons.csv.version>
+        <apache.commons.bean.version>1.9.4</apache.commons.bean.version>
         <apache.lucene.version>10.1.0</apache.lucene.version>
         <apache.tika.version>3.0.0</apache.tika.version>
 
         <dom4j.version>2.1.4</dom4j.version>
-        <guava.version>33.4.0-jre</guava.version>
+        <google.guava.version>33.4.0-jre</google.guava.version>
+        <google.protobuf.version>4.29.2</google.protobuf.version>
         <classindex.version>3.13</classindex.version>
         <sshd.version>2.14.0</sshd.version>
         <aws.s3.version>1.12.780</aws.s3.version>
@@ -200,6 +202,12 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-email</artifactId>
                 <version>${apache.commons.email.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${apache.commons.bean.version}</version>
             </dependency>
 
             <dependency>
@@ -416,7 +424,13 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>${guava.version}</version>
+                <version>${google.guava.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.protobuf</groupId>
+                <artifactId>protobuf-java</artifactId>
+                <version>${google.protobuf.version}</version>
             </dependency>
 
             <dependency>
