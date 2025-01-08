@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -41,11 +41,11 @@
 
         <slf4j.version>2.0.16</slf4j.version>
         <log4j.version>2.24.3</log4j.version>
-        <logback.version>1.5.15</logback.version>
+        <logback.version>1.5.16</logback.version>
 
         <apache.commons.lang.version>3.17.0</apache.commons.lang.version>
         <apache.common.compress.version>1.27.1</apache.common.compress.version>
-        <apache.common.codec.version>1.17.1</apache.common.codec.version>
+        <apache.common.codec.version>1.17.2</apache.common.codec.version>
         <apache.httpclient.version>4.5.14</apache.httpclient.version>
         <apache.commons.io.version>2.18.0</apache.commons.io.version>
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
@@ -70,7 +70,7 @@
         <confluent.version>7.8.0</confluent.version>
         <flexmark.version>0.64.8</flexmark.version>
         <mvel.version>2.5.2.Final</mvel.version>
-        <jsqlparser.version>5.0</jsqlparser.version>
+        <jsqlparser.version>5.1</jsqlparser.version>
         <logstash-gelf.version>1.15.1</logstash-gelf.version>
         <datafaker.version>2.4.2</datafaker.version>
         <ipaddress.version>5.5.1</ipaddress.version>
@@ -84,12 +84,12 @@
         <subethasmtp.version>7.1.1</subethasmtp.version>
         <oshi.version>6.6.5</oshi.version>
 
-        <flyaway.version>11.1.0</flyaway.version>
+        <flyaway.version>11.1.1</flyaway.version>
         <mysql.version>9.1.0</mysql.version>
         <postgres.version>42.7.4</postgres.version>
         <vertica.version>24.4.0-0</vertica.version>
         <mariadb.version>3.5.1</mariadb.version>
-        <sqlite.version>3.47.1.0</sqlite.version>
+        <sqlite.version>3.47.2.0</sqlite.version>
         <h2.version>2.3.232</h2.version>
         <ojdbc.version>23.6.0.24.10</ojdbc.version>
         <hikaricp.version>6.2.1</hikaricp.version>
@@ -97,9 +97,9 @@
         <!-- Tests -->
 
         <junit.version>5.11.4</junit.version>
-        <assertj.version>3.27.0</assertj.version>
-        <assertj.guava.version>3.27.0</assertj.guava.version>
-        <mockito.version>5.14.2</mockito.version>
+        <assertj.version>3.27.2</assertj.version>
+        <assertj.guava.version>3.27.2</assertj.guava.version>
+        <mockito.version>5.15.2</mockito.version>
         <jmh.version>1.37</jmh.version>
         <awaitility.version>4.2.2</awaitility.version>
         <selenium.version>4.27.0</selenium.version>
