@@ -25,12 +25,12 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7</version>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -83,6 +83,7 @@
         <syslog.version>1.1.7</syslog.version>
         <subethasmtp.version>7.1.1</subethasmtp.version>
         <oshi.version>6.6.5</oshi.version>
+        <jansi.version>2.4.1</jansi.version>
 
         <flyaway.version>11.1.1</flyaway.version>
         <mysql.version>9.1.0</mysql.version>
@@ -594,6 +595,12 @@
                 <groupId>com.github.oshi</groupId>
                 <artifactId>oshi-core</artifactId>
                 <version>${oshi.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.fusesource.jansi</groupId>
+                <artifactId>jansi</artifactId>
+                <version>${jansi.version}</version>
             </dependency>
 
             <!-- Runtime / BOMs -->
