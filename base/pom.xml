@@ -25,13 +25,13 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-base</artifactId>
-    <version>1.0.12</version>
+    <version>1.0.11</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.12</version>
+        <version>1.0.11</version>
     </parent>
 
     <name>BOM :: Base</name>
@@ -58,14 +58,14 @@
 
         <dom4j.version>2.1.4</dom4j.version>
         <google.guava.version>33.4.0-jre</google.guava.version>
-        <google.protobuf.version>4.30.0</google.protobuf.version>
+        <google.protobuf.version>4.30.1</google.protobuf.version>
         <classindex.version>3.13</classindex.version>
         <sshd.version>2.15.0</sshd.version>
         <aws.s3.version>1.12.782</aws.s3.version>
         <minio.version>8.5.17</minio.version>
         <jsch.version>0.1.55</jsch.version>
         <rocksdb.version>9.10.0</rocksdb.version>
-        <micrometer.version>1.14.4</micrometer.version>
+        <micrometer.version>1.14.5</micrometer.version>
         <kryo.version>5.6.2</kryo.version>
         <lombok.version>1.18.36</lombok.version>
         <jodd.version>5.1.6</jodd.version>
@@ -83,15 +83,15 @@
         <snmp4j.version>3.9.0</snmp4j.version>
         <jsmiparser.version>0.14</jsmiparser.version>
         <syslog.version>1.1.7</syslog.version>
-        <subethasmtp.version>7.1.3</subethasmtp.version>
-        <oshi.version>6.7.0</oshi.version>
+        <subethasmtp.version>7.1.4</subethasmtp.version>
+        <oshi.version>6.7.1</oshi.version>
         <jansi.version>2.4.1</jansi.version>
         <thymeleaf.version>3.1.3.RELEASE</thymeleaf.version>
         <jackson.version>2.18.3</jackson.version>
         <quartz.version>2.4.0</quartz.version>
 
         <!-- Database -->
-        <flyway.version>11.3.4</flyway.version>
+        <flyway.version>11.4.0</flyway.version>
         <mysql.version>9.2.0</mysql.version>
         <postgres.version>42.7.5</postgres.version>
         <vertica.version>24.4.0-0</vertica.version>
@@ -102,14 +102,14 @@
         <h2.version>2.3.232</h2.version>
         <ojdbc.version>23.7.0.25.01</ojdbc.version>
         <hikaricp.version>6.2.1</hikaricp.version>
-        <jooq.version>3.20.1</jooq.version>
+        <jooq.version>3.20.2</jooq.version>
 
         <!-- Tests -->
 
-        <junit.version>5.12.0</junit.version>
+        <junit.version>5.12.1</junit.version>
         <assertj.version>3.27.3</assertj.version>
         <assertj.guava.version>3.27.3</assertj.guava.version>
-        <mockito.version>5.16.0</mockito.version>
+        <mockito.version>5.16.1</mockito.version>
         <jmh.version>1.37</jmh.version>
         <awaitility.version>4.3.0</awaitility.version>
         <selenium.version>4.29.0</selenium.version>
