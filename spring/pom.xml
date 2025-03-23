@@ -23,15 +23,13 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.microfalx.bom</groupId>
     <artifactId>bom-spring</artifactId>
-    <version>1.0.11</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>net.microfalx.bom</groupId>
         <artifactId>bom</artifactId>
-        <version>1.0.11</version>
+        <version>1.0.12</version>
     </parent>
 
     <name>BOM :: Spring</name>
