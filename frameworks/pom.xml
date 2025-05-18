@@ -62,6 +62,7 @@
         <graphql-java.version>22.3</graphql-java.version>
         <caffeine.version>3.2.0</caffeine.version>
         <awssdk.version>2.31.45</awssdk.version>
+        <jlama.version>0.8.4</jlama.version>
         <langchain4j.version>1.0.0</langchain4j.version>
         <langchain4j.community.version>1.0.0-beta5</langchain4j.community.version>
 
@@ -572,6 +573,20 @@
                 <groupId>com.github.ben-manes.caffeine</groupId>
                 <artifactId>simulator</artifactId>
                 <version>${caffeine.version}</version>
+            </dependency>
+
+            <!-- JLama -->
+
+            <dependency>
+                <groupId>com.github.tjake</groupId>
+                <artifactId>jlama-core</artifactId>
+                <version>${jlama.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.tjake</groupId>
+                <artifactId>jlama-native</artifactId>
+                <version>${jlama.version}</version>
             </dependency>
 
             <!-- Other -->
