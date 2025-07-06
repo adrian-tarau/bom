@@ -38,7 +38,7 @@
 
         <!-- Runtime -->
 
-        <spring.boot.version>3.4.2</spring.boot.version>
+        <spring.boot.version>3.5.3</spring.boot.version>
 
     </properties>
 
@@ -84,7 +84,7 @@
             <dependency>
                 <groupId>nz.net.ultraq.thymeleaf</groupId>
                 <artifactId>thymeleaf-layout-dialect</artifactId>
-                <version>3.3.0</version>
+                <version>3.4.0</version>
             </dependency>
 
         </dependencies>
