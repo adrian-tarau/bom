@@ -25,13 +25,13 @@
 
     <groupId>net.microfalx.bom</groupId>
     <artifactId>bom</artifactId>
-    <version>1.0.13</version>
+    <version>1.0.14</version>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>net.microfalx</groupId>
         <artifactId>pom</artifactId>
-        <version>1.0.7</version>
+        <version>1.0.9</version>
     </parent>
 
     <name>BOM</name>
