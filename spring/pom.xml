@@ -38,8 +38,8 @@
 
         <!-- Runtime -->
 
-        <spring.boot.version>3.5.7</spring.boot.version>
-        <spring.ai.version>1.0.3</spring.ai.version>
+        <spring.boot.version>3.5.9</spring.boot.version>
+        <spring.ai.version>1.1.2</spring.ai.version>
         <springdoc.openapi.version>2.8.13</springdoc.openapi.version>
 
     </properties>
@@ -107,5 +107,157 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <configuration>
+                    <ruleSet>
+                        <!-- Specific packages -->
+                        <rules>
+                            <!-- From Base Module -->
+                            <rule>
+                                <groupId>com.squareup.okhttp3</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>5.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>net.serenity-bdd</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>5.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>io.minio</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>8.6.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.rocksdb</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>10.3.*</version>
+                                    </ignoreVersion>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>10.4.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+
+                            <!-- From Frameworks Module -->
+                            <rule>
+                                <groupId>org.hibernate.orm</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>7.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.apache.groovy</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>5.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.glassfish.jersey</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>4.0.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.jetbrains.kotlin</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>2.3.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+
+                            <!-- From Spring Module -->
+                            <rule>
+                                <groupId>org.springframework.boot</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>4.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.springframework</groupId>
+                                <artifactId>spring-*</artifactId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>7.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.springframework.data</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>4.*</version>
+                                    </ignoreVersion>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>5.*</version>
+                                    </ignoreVersion>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>6.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.springframework.ws</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>5.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.springdoc</groupId>
+                                <artifactId>springdoc-openapi*</artifactId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>3*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                        </rules>
+                    </ruleSet>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
