@@ -158,7 +158,15 @@
                                     </ignoreVersion>
                                 </ignoreVersions>
                             </rule>
-
+                            <rule>
+                                <groupId>org.testcontainers</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>2.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
                             <!-- From Frameworks Module -->
                             <rule>
                                 <groupId>org.hibernate.orm</groupId>
@@ -188,6 +196,15 @@
                                 </ignoreVersions>
                             </rule>
                             <rule>
+                                <groupId>org.eclipse.jetty</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>12.1.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
                                 <groupId>org.jetbrains.kotlin</groupId>
                                 <ignoreVersions>
                                     <ignoreVersion>
@@ -196,7 +213,24 @@
                                     </ignoreVersion>
                                 </ignoreVersions>
                             </rule>
-
+                            <rule>
+                                <groupId>io.rest-assured</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>6.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.testcontainers</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>2.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
                             <!-- From Spring Module -->
                             <rule>
                                 <groupId>org.springframework.boot</groupId>

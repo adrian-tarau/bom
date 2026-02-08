@@ -685,7 +685,15 @@
                                     </ignoreVersion>
                                 </ignoreVersions>
                             </rule>
-
+                            <rule>
+                                <groupId>org.testcontainers</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>2.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
                             <!-- From Frameworks Module -->
                             <rule>
                                 <groupId>org.hibernate.orm</groupId>
@@ -738,6 +746,15 @@
                                     <ignoreVersion>
                                         <type>regex</type>
                                         <version>6.*</version>
+                                    </ignoreVersion>
+                                </ignoreVersions>
+                            </rule>
+                            <rule>
+                                <groupId>org.testcontainers</groupId>
+                                <ignoreVersions>
+                                    <ignoreVersion>
+                                        <type>regex</type>
+                                        <version>2.*</version>
                                     </ignoreVersion>
                                 </ignoreVersions>
                             </rule>
