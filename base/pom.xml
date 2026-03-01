@@ -55,6 +55,7 @@
         <apache.derby.version>10.17.1.0</apache.derby.version>
         <apache.james.version>0.8.13</apache.james.version>
 
+        <jspecify.version>1.0.0</jspecify.version>
         <dom4j.version>2.2.0</dom4j.version>
         <google.guava.version>33.5.0-jre</google.guava.version>
         <google.protobuf.version>4.33.2</google.protobuf.version>
@@ -518,6 +519,12 @@
             </dependency>
 
             <!-- Runtime / Misc -->
+
+            <dependency>
+                <groupId>org.jspecify</groupId>
+                <artifactId>jspecify</artifactId>
+                <version>${jspecify.version}</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.awaitility</groupId>

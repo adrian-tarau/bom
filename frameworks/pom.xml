@@ -71,9 +71,6 @@
         <kotlin.serialization.version>1.10.0</kotlin.serialization.version>
         <graphql-java.version>22.3</graphql-java.version>
         <caffeine.version>3.2.3</caffeine.version>
-        <jlama.version>0.8.4</jlama.version>
-        <langchain4j.version>1.11.0</langchain4j.version>
-        <langchain4j.community.version>1.0.0-beta5</langchain4j.community.version>
 
     </properties>
 
@@ -240,22 +237,6 @@
                 <groupId>io.projectreactor</groupId>
                 <artifactId>reactor-bom</artifactId>
                 <version>${projectreactor.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>dev.langchain4j</groupId>
-                <artifactId>langchain4j-bom</artifactId>
-                <version>${langchain4j.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>dev.langchain4j</groupId>
-                <artifactId>langchain4j-community-bom</artifactId>
-                <version>${langchain4j.community.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
