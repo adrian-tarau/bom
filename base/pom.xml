@@ -119,6 +119,7 @@
         <assertj.version>3.27.6</assertj.version>
         <assertj.guava.version>3.27.6</assertj.guava.version>
         <mockito.version>5.21.0</mockito.version>
+        <instancio.version>5.5.1</instancio.version>
         <jmh.version>1.37</jmh.version>
         <awaitility.version>4.3.0</awaitility.version>
         <selenium.version>4.39.0</selenium.version>
@@ -269,6 +270,20 @@
                 <groupId>io.cucumber</groupId>
                 <artifactId>cucumber-junit-platform-engine</artifactId>
                 <version>${cucumber.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.instancio</groupId>
+                <artifactId>instancio-junit</artifactId>
+                <version>${instancio.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.instancio</groupId>
+                <artifactId>instancio-guava</artifactId>
+                <version>${instancio.version}</version>
                 <scope>test</scope>
             </dependency>
 
